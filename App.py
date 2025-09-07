@@ -4,7 +4,8 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    return YOLO(r"C:\CivicAI SIH Project\classify\train\weights\best.pt")
+    return YOLO("best.pt")   # same folder me file rakho
+
 
 model = load_model()
 department_map = {
@@ -97,3 +98,4 @@ if uploaded_file is not None:
 
 st.markdown("---")
 st.caption("Powered by AI-driven Civic Issue Classifier")
+
